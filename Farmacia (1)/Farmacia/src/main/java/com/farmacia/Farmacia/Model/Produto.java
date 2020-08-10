@@ -20,10 +20,10 @@ public class Produto {
 	
 	@NotNull
 	@Size (min = 8, max = 255)
-	private String Nome;
+	private String nome;
 	
 	@NotNull
-	private float Preco;
+	private float preco;
 
 	@ManyToOne
 	@JsonIgnoreProperties ("produto")
@@ -39,20 +39,31 @@ public class Produto {
 	}
 
 	public String getNome() {
-		return Nome;
+		return nome;
 	}
 
 	public void setNome(String nome) {
-		Nome = nome;
+		this.nome = nome;
 	}
 
 	public float getPreco() {
-		return Preco;
+		return preco;
 	}
 
 	public void setPreco(float preco) {
-		Preco = preco;
+		this.preco = preco;
 	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
+	
+	
 	
 	
 	
